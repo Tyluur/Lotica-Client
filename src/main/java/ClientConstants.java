@@ -11,7 +11,7 @@ public class ClientConstants {
 	/**
 	 * The name
 	 */
-	public static final String NAME = "Lotica";
+	public static final String NAME = "Dusk";
 	
 	/**
 	 * The build version
@@ -41,12 +41,12 @@ public class ClientConstants {
 	/**
 	 * The IP to connect to
 	 */
-	public static final String GAME_SERVER_IP = CONNECTING_TO_SERVER ? "lotica1.soulplayps.com" : "127.0.0.1";
+	public static final String GAME_SERVER_IP = CONNECTING_TO_SERVER ? "world1.dusk.rs" : "127.0.0.1";
 	
 	/**
 	 * The ip of the update server
 	 */
-	public static final String UPDATE_SERVER_IP = CONNECTING_TO_SERVER ? "lotica1.soulplayps.com" : "127.0.0.1";
+	public static final String UPDATE_SERVER_IP = CONNECTING_TO_SERVER ? "world1.dusk.rs" : "127.0.0.1";
 	
 	/**
 	 * The location the cache is saved to
@@ -56,18 +56,25 @@ public class ClientConstants {
 	/**
 	 * The url to our website
 	 */
-	public static final String WEBSITE = "lotica.org";
+	public static final String WEBSITE = "dusk.rs";
 	
 	/**
 	 * The default zoom modifier
 	 */
 	public static int ZOOM_MODIFIER = 3;
-	
+
 	/**
 	 * The login responses that were replaced
 	 */
-	public static final String[][] REPLACED_LOGINS = new String[][]{{"Your account has negative membership credit. Please log into the billing system to add credit to your account.", "Your account is not legible to log in. Please submit an application on the forums."}, {"Invalid login or password.<br><br>For accounts created after the 24th of November 2010, please use your email address to login. Otherwise please login with your username.", "You must log in with the forum <col=23CB1D>username</col> & <col=23CB1D>password</col> you registered with."}, {"Your session has expired. Please click 'Back' in your browser to renew it.", "Database connection error! Please retry in a few minutes..."}, {"Invalid loginserver requested. Please try using a different world.", "Your account has been nulled.<br>Post this bug on the forums to join the game."}, {"The server is being updated. Please wait a few minutes and try again.", "A forum account has just been registered for you with the username & password you entered!<br><br>Go back and log in to play."}, {"Service unavailable.", "Username must be between 3-12<br>characters be alphanumerical."}};
-	
+	public static final String[][] REPLACED_LOGINS = new String[][]{
+/*			{"Your account has negative membership credit. Please log into the billing system to add credit to your account.", "Your account is not legible to log in. Please submit an application on the forums."},
+			{"Invalid login or password.<br><br>For accounts created after the 24th of November 2010, please use your email address to login. Otherwise please login with your username.", "You must log in with the forum <col=23CB1D>username</col> & <col=23CB1D>password</col> you registered with."},
+			{"Your session has expired. Please click 'Back' in your browser to renew it.", "Database connection error! Please retry in a few minutes..."},
+			{"Invalid loginserver requested. Please try using a different world.", "Your account has been nulled.<br>Post this bug on the forums to join the game."},
+			{"The server is being updated. Please wait a few minutes and try again.", "A forum account has just been registered for you with the username & password you entered!<br><br>Go back and log in to play."},
+			{"Service unavailable.", "Username must be between 3-12<br>characters be alphanumerical."}*/
+	};
+
 	/**
 	 * If we are running from a jar file
 	 */

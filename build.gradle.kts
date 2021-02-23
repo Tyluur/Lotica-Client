@@ -1,41 +1,50 @@
+import com.github.jengelman.gradle.plugins.shadow.tasks.ShadowJar
+
 plugins {
     application
-    kotlin("jvm") version "1.3.72"
+    kotlin("jvm") version "1.4.20"
+    id("com.github.johnrengelman.shadow") version "5.1.0"
 }
 
-apply(plugin = "kotlin")
-apply(plugin = "idea")
-apply(plugin = "org.jetbrains.kotlin.jvm")
-
-group = "dusk-rs"
-version = "0.0.1"
-
-java.sourceCompatibility = JavaVersion.toVersion('8')
-java.targetCompatibility = JavaVersion.toVersion('8')
-
-repositories {
-    mavenCentral()
-    mavenLocal()
-    jcenter()
-    maven(url = "https://repo.maven.apache.org/maven2")
-    maven(url = "https://jitpack.io")
-    maven(url = "https://dl.bintray.com/michaelbull/maven")
-}
+val launcherClass = "Loader"
 
 application {
     mainClassName = "Loader"
 }
 
+repositories {
+    mavenCentral()
+}
+
 dependencies {
-    // Java
+    // Jvm
     implementation(kotlin("stdlib-jdk8"))
+
+    //Utilities
+    implementation("commons-codec:commons-codec:1.9")
+
+    // Logging
+    implementation("ch.qos.logback:logback-classic:1.2.3")
+    implementation("com.michael-bull.kotlin-inline-logger", "kotlin-inline-logger-jvm", "1.0.2")
+}
+
+java {
+    withSourcesJar()
+    withJavadocJar()
 }
 
 tasks {
-    compileKotlin {
-        kotlinOptions.jvmTarget = "1.8"
+    named<ShadowJar>("shadowJar") {
+        archiveBaseName.set("app")
+        mergeServiceFiles()
+        manifest {
+            attributes(mapOf("Main-Class" to "Loader"))
+        }
     }
-    compileTestKotlin {
-        kotlinOptions.jvmTarget = "1.8"
+}
+
+tasks {
+    build {
+        dependsOn(shadowJar)
     }
 }

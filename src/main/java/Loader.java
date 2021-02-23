@@ -101,7 +101,7 @@ public class Loader extends Applet {
 		windowFrame.getContentPane().add(componentsLayer, BorderLayout.CENTER);
 		windowFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		windowFrame.setBounds(100, 50, 779, 555);
-		windowFrame.setIconImage(ClientConstants.getImage("./resource/icon.png"));
+//		windowFrame.setIconImage(ClientConstants.getImage("./icon.png"));
 		windowFrame.setVisible(true);
 		windowFrame.setLocationRelativeTo(null);
 	}
