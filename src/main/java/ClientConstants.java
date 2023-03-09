@@ -3,7 +3,7 @@ import java.awt.*;
 import java.io.File;
 
 /**
- * @author Tyluur <itstyluur@gmail.com>
+ * @author Tyluur <itstyluur@icloud.com>
  * @since 5/14/2016
  */
 public class ClientConstants {

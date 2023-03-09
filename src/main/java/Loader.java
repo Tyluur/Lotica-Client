@@ -4,6 +4,10 @@ import java.awt.*;
 import java.net.URL;
 import java.util.Properties;
 
+/**
+ * @author Tyluur <itstyluur@icloud.com>
+ * @since 5/14/2016
+ */
 @SuppressWarnings("serial")
 public class Loader extends Applet {
 	
